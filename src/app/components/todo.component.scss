@@ -1,0 +1,45 @@
+.todo-list {
+  &__container {
+    width: 100%;
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+  &__add-wrapper {
+    width: 100%;
+  }
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__input {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+  }
+  &__item {
+    &-description {
+      height: 36px;
+      line-height: 36px;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+  &__remove-button, &__status-button {
+    padding-right: 8px;
+    padding-left: 8px;
+    height: 36px;
+    border-radius: 2px;
+    float: right;
+    border: none;
+    font-weight: 500;
+  }
+  &__remove-button {
+  }
+  &__status-button {
+
+    margin-right: 8px;
+    &.complete {}
+  }
+}

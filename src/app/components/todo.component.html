@@ -1,0 +1,17 @@
+<div class="todo-list__container">
+  <div class="todo-list__add-wrapper">
+    <input class="todo-list__input" placeholder="What needs to be done?" (keyup.enter)="add($event, index)">
+  </div>
+  <div class="todo-list__wrapper">
+    <div class="todo-list__item" *ngFor="let todo of todoList; let index = index">
+      <div class="todo-list__item-description">
+        {{todo.description}}
+        <button class="todo-list__remove-button" (click)="remove(index)">remove</button>
+        <button class="todo-list__status-button" [ngClass]="{complete: todo.status === 'complete'}" (click)="markComplete()">complete</button>
+      </div>
+    </div>
+  </div>
+  <div class=todo-list__status-wrapper>
+    {{numberOfActive }} {{numberOfActive > 1 ? 'items' : 'item'}} left
+  </div>
+</div>
